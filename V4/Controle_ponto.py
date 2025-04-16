@@ -20,7 +20,7 @@ class dia(datetime):
 
         def entrada_II():
             input_str = (input('Entrada segundo turno!\nInsira o horario: '))
-            self.turno_II_entrada = datetime.datetime.strptime(input_str, "%h:%M").time()
+            self.turno_II_entrada = datetime.datetime.strptime(input_str, "%H:%M").time()
 
         def saida_II():
             input_str = (input('Saida segundo turno!\nInsira o horario: '))
