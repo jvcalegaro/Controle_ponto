@@ -16,11 +16,9 @@ O desenvolvimento está sendo versionado aos poucos, conforme o código vai send
 - Métodos internos com sintaxe confusa e chamadas incorretas.
 - Utilização de herança entre `hora`, `minuto` e `segundo`, o que tornava a manipulação dos dados mais difícil.
 
-<<<<<<< HEAD
+
 ### ⚙️ Versão Atual (V6)
-=======
-### ⚙️ Versão Atual (V5)
->>>>>>> 2e23eaebc658a076fe2c00a2daed676b66b103fd
+
 - Reestruturação total da classe `dia`.
 - Uso direto da biblioteca `datetime` para manipular horários.
 - Entrada dos dados via `input`, convertendo para `datetime.time`.
