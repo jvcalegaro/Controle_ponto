@@ -17,7 +17,7 @@ O desenvolvimento está sendo versionado aos poucos, conforme o código vai send
 - Utilização de herança entre `hora`, `minuto` e `segundo`, o que tornava a manipulação dos dados mais difícil.
 
 
-### ⚙️ Versão Atual (V6)
+### ⚙️ Versão Atual (V7)
 
 - Reestruturação total da classe `dia`.
 - Uso direto da biblioteca `datetime` para manipular horários.
