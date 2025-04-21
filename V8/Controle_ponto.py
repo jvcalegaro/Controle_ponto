@@ -24,9 +24,9 @@ class dia(datetime.time):
 
         return {
             "Turno I Entrada": self.turno_I_entrada,
-            "Turno I Saída": self.turno_I_saida,
+            "Turno I Saida": self.turno_I_saida,
             "Turno II Entrada": self.turno_II_entrada,
-            "Turno II Saída": self.turno_II_saida,
+            "Turno II Saida": self.turno_II_saida,
         }
         
 
