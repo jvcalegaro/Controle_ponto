@@ -30,7 +30,7 @@ class Dia(datetime.time):
             "Turno II Saida": self.turno_II_saida,
         }
 
-def salvar_turnos(obj_dia, arquivo, data):
+def salvar_dia(obj_dia, arquivo, data):
 
     turnos = obj_dia.get_turnos()
     registro = {data: turnos}
@@ -51,4 +51,4 @@ CAMINHO_ARQUIVO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pont
 DATA_ATUAL = datetime.date.today().isoformat()
 hoje = Dia()
 hoje.set_turnos()
-salvar_turnos(hoje, CAMINHO_ARQUIVO, DATA_ATUAL)
+salvar_dia(hoje, CAMINHO_ARQUIVO, DATA_ATUAL)
