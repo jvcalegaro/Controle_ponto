@@ -1,8 +1,9 @@
 import datetime
 import json
+import os
 
 
-class dia(datetime.time):
+class Dia(datetime.time):
     def __init__(self):
         self.turno_I_entrada = None
         self.turno_I_saida = None
@@ -28,20 +29,26 @@ class dia(datetime.time):
             "Turno II Entrada": self.turno_II_entrada,
             "Turno II Saida": self.turno_II_saida,
         }
-        
+
+def salvar_turnos(obj_dia, arquivo, data):
+
+    turnos = obj_dia.get_turnos()
+    registro = {data: turnos}
+
+    if os.path.exists(arquivo):
+        with open(arquivo, "r") as f:
+            dados_existentes = json.load(f)
+    else:
+        dados_existentes = {}
+
+    dados_existentes.update(registro)
+
+    with open(arquivo, "w") as f:
+        json.dump(dados_existentes, f, indent=4, default=str)
 
 
-hoje = dia()
-
+CAMINHO_ARQUIVO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ponto.json")
+DATA_ATUAL = datetime.date.today().isoformat()
+hoje = Dia()
 hoje.set_turnos()
-for nome, horario in hoje.get_turnos().items():
-    print(f"{nome}:  \t{horario.strftime('%H:%M')}")
-
-turnos = hoje.get_turnos()
-
-with open("version_1.0\ponto.json", "w") as f:
-    json.dump(turnos, f, indent=4, default=str)
-
-with open("version_1.0\ponto.json", "r") as f:
-    dados = json.load(f)
-    print(dados)
+salvar_turnos(hoje, CAMINHO_ARQUIVO, DATA_ATUAL)
