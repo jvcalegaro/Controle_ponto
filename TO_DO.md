@@ -16,7 +16,7 @@ Objetivo: Melhor organização dos dados
 - Ler todos os arquivos e montar um resumo do mês, se quiser.
 
 ## 🧠 Algo mais avançado (pra depois)
-- Interface simples com Tkinter ou Textual (pra um visual básico).
-- API REST com Flask pra mandar esses dados pra um front, se quiser.
+- Interface simples com Tkinter ou Textual (pra um visual básico) (PyQT?).
+- API REST com Flask pra mandar esses dados pra um front.
 - Exportar pra CSV ou Excel depois.
 - Automatizar envio por e-mail / backup no GitHub.

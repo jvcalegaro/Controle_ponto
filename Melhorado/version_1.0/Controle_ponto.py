@@ -39,9 +39,9 @@ for nome, horario in hoje.get_turnos().items():
 
 turnos = hoje.get_turnos()
 
-with open("ponto.json", "w") as f:
+with open("version_1.0/ponto.json", "w") as f:
     json.dump(turnos, f, indent=4, default=str)
 
-with open("ponto.json", "r") as f:
+with open("version_1.0/ponto.json", "r") as f:
     dados = json.load(f)
     print(dados)
